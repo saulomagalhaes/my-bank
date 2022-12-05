@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import logo from '../../../assets/images/logo.png'
 
-export function Form() {
+export function RegisterForm() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')

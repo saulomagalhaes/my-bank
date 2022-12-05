@@ -1,15 +1,15 @@
 import { render, screen, fireEvent } from '@testing-library/react'
-import { Form } from '.'
+import { RegisterForm } from '.'
 
-describe('<Form />', () => {
+describe('<RegisterForm />', () => {
   it('o botão cadastrar deve estar desabilitado caso todos os campos não estejam preenchidos', () => {
-    render(<Form />)
+    render(<RegisterForm />)
     const button = screen.getByRole('button', { name: /cadastrar/i })
     expect(button).toBeDisabled()
   })
 
   it('o botão cadastrar deve estar habilitado caso todos os campos estejam preenchidos', () => {
-    render(<Form />)
+    render(<RegisterForm />)
     const button = screen.getByRole('button', { name: /cadastrar/i })
     const name = screen.getByPlaceholderText(/digite seu nome/i)
     const email = screen.getByPlaceholderText(/digite seu e-mail/i)
